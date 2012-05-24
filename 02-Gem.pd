@@ -1,0 +1,36 @@
+#N canvas 557 119 477 617 10;
+#X declare -lib Gem;
+#X obj 28 8 cnv 15 400 50 empty empty 2 14 24 0 24 -175655 -66577 0
+;
+#X text 29 549 Max Neupert \, GMU - Bauhaus University Weimar 2008
+;
+#X text 75 16 Pure data + Gem;
+#X obj 33 344 gemwin;
+#X msg 33 288 create \, 1;
+#X msg 41 314 0 \, destroy;
+#X text 123 313 stop rendering and close the window;
+#X text 30 200 Note: you can send more than one message with one message
+box when seperated by comma and space.;
+#X msg 31 236 create \, 1;
+#X text 99 236 is the same like;
+#X msg 203 236 create;
+#X text 253 236 +;
+#X msg 269 236 1;
+#X text 29 395 Challenge:;
+#X text 38 449 Menu -> Help -> Browser -> 5.reference -> Gem -> gemwin
+;
+#X text 29 65 Gem is a graphics library for Pure Data.;
+#X text 28 165 In order to use Gem we need to open a window to see
+its output and tell Gem to start rendering.;
+#X text 38 410 read the helpfile for gemwin and find out how to set
+the framerate and size of the window. You can open the helpfile with
+rightclick-help on the object or by navigating to it:;
+#X text 30 80 There are other graphics librarys like Gridflow \, PDP
+and PiDiP.;
+#X text 123 279 a sequence of two messages in one messagebox to create
+a window and start rendering;
+#X obj 29 143 declare -lib Gem;
+#X text 28 109 To tell Pd to load the Gem library we need to declare
+it for the current patch:;
+#X connect 4 0 3 0;
+#X connect 5 0 3 0;

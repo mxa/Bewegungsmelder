@@ -1,0 +1,66 @@
+#N canvas 651 35 518 558 10;
+#X declare -lib Gem;
+#X obj 15 11 cnv 15 400 50 empty empty 4a 14 24 0 24 -175655 -66577
+0;
+#X text 70 19 Pure data + Gem;
+#X obj 18 230 gemwin;
+#X msg 18 133 create \, 1;
+#X msg 26 159 0 \, destroy;
+#X msg 36 207 frame \$1;
+#X floatatom 36 185 5 0 0 0 - - -;
+#X obj 109 418 pix_texture;
+#X obj 109 396 pix_chroma_key;
+#X msg 138 373 direction \$1;
+#X obj 138 353 tgl 15 1 empty empty empty 0 -6 0 8 -262144 -1 -1 1
+1;
+#X floatatom 130 254 5 0 255 0 - - -;
+#X floatatom 141 311 5 0 255 0 - - -;
+#X obj 134 292 hsl 100 15 0 1 0 1 empty empty empty -2 -8 0 10 -262144
+-1 -1 1300 1;
+#X obj 125 235 hsl 100 15 0 1 0 1 empty empty empty -2 -8 0 10 -262144
+-1 -1 5500 1;
+#X msg 122 271 value \$1 \$1 \$1;
+#X msg 131 329 range \$1 \$1 \$1;
+#X obj 109 132 gemhead;
+#X obj 109 153 pix_video;
+#X obj 109 442 rectangle 4 3;
+#X obj 282 133 gemhead;
+#X obj 282 153 pix_image brightonbeach.jpg;
+#X obj 109 176 pix_info;
+#X obj 282 335 pix_resize;
+#X obj 296 239 pack f f;
+#X msg 296 259 dimen \$1 \$2;
+#X obj 282 356 pix_yuv;
+#X text 70 32 Chroma Keying;
+#X obj 109 213 pix_yuv;
+#X obj 309 19 declare -lib Gem;
+#X text 16 70 Keying two images together is quite easy. This one is
+heavily inspired by the helppatch of pix_chroma_key.;
+#X text 24 502 Max Neupert \, GMU - Bauhaus University Weimar 2009
+- 2012;
+#X connect 3 0 2 0;
+#X connect 4 0 2 0;
+#X connect 5 0 2 0;
+#X connect 6 0 5 0;
+#X connect 7 0 19 0;
+#X connect 8 0 7 0;
+#X connect 9 0 8 0;
+#X connect 10 0 9 0;
+#X connect 13 0 12 0;
+#X connect 13 0 16 0;
+#X connect 14 0 11 0;
+#X connect 14 0 15 0;
+#X connect 15 0 8 0;
+#X connect 16 0 8 0;
+#X connect 17 0 18 0;
+#X connect 18 0 22 0;
+#X connect 20 0 21 0;
+#X connect 21 0 23 0;
+#X connect 22 0 28 0;
+#X connect 22 1 24 0;
+#X connect 22 2 24 1;
+#X connect 23 0 26 0;
+#X connect 24 0 25 0;
+#X connect 25 0 23 0;
+#X connect 26 0 8 1;
+#X connect 28 0 8 0;

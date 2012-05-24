@@ -1,0 +1,49 @@
+#N canvas 557 119 513 617 10;
+#X obj 28 8 cnv 15 400 50 empty empty 1 14 24 0 24 -175655 -66577 0
+;
+#X text 75 16 Pure data;
+#X text 29 585 Max Neupert \, GMU - Bauhaus University Weimar 2008
+;
+#X obj 99 243 cnv 15 55 24 empty empty empty 20 12 0 14 -33529 -66577
+0;
+#X obj 76 284 +;
+#X floatatom 109 247 5 0 0 0 - - -;
+#X floatatom 76 319 5 0 0 0 - - -;
+#X obj 40 243 cnv 15 55 24 empty empty empty 20 12 0 14 -230353 -66577
+0;
+#X floatatom 52 247 5 0 0 0 - - -;
+#X text 181 237 dry basics to start with:;
+#X obj 83 88;
+#X text 144 89 Object \, still empty;
+#X obj 84 115 +;
+#X text 144 116 Object addition;
+#X floatatom 84 166 5 0 0 0 - - -;
+#X text 144 166 Number Box;
+#X text 282 89 Objekt \, leer;
+#X text 282 116 Objekt zur Addition;
+#X text 282 167 Zahlenfeld;
+#X text 30 85 ctl-1;
+#X text 29 165 ctl-3;
+#X msg 83 139;
+#X text 144 137 Message Box;
+#X text 283 140 Nachrichtenfeld;
+#X text 29 141 ctl-2;
+#X text 28 66 Our vocabulary of objects to start with:;
+#X floatatom 79 388 5 0 0 0 - - -;
+#X obj 79 446 print;
+#X obj 79 415 trigger float bang;
+#X text 212 416 the object trigger sorts and converts;
+#X text 213 445 prints out to the console window;
+#X text 31 508 Challenge:;
+#X text 179 275 2 objects have one warm inlet \, the leftmost.;
+#X text 179 292 3 objects have one or more cold inlets;
+#X text 179 257 1 Pd has edit-mode and run-mode;
+#X text 31 523 modify the addition patch above so both numbers trigger
+the calculation. Use the object trigger.;
+#X text 34 200 Objects receive messages to act upon.;
+#X connect 4 0 6 0;
+#X connect 5 0 4 1;
+#X connect 8 0 4 0;
+#X connect 26 0 28 0;
+#X connect 28 0 27 0;
+#X connect 28 1 27 0;

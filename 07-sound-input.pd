@@ -1,0 +1,57 @@
+#N canvas 617 51 472 659 10;
+#X declare -lib Gem;
+#X obj 28 7 cnv 15 400 50 empty empty 7 14 24 0 24 -175655 -66577 0
+;
+#X text 75 16 Pure data + Gem;
+#X msg 29 106 create \, 1;
+#X msg 37 132 0 \, destroy;
+#X obj 82 300 gemhead;
+#X obj 169 111 adc~;
+#X obj 169 210 env~;
+#X obj 291 207 env~;
+#X obj 169 175 lop~ 100;
+#X obj 82 369 rectangle 0.2 1;
+#X obj 169 305 pow 2;
+#X obj 169 279 / 40;
+#X obj 82 415 rectangle 0.2 1;
+#X obj 291 307 pow 2;
+#X obj 82 392 translateXYZ 1 0 0;
+#X obj 291 281 / 50;
+#X obj 291 174 hip~ 400;
+#X obj 28 529 loadbang;
+#X msg 28 551 \; pd dsp 1;
+#X text 75 29 Using the micropone to trigger;
+#X text 31 65 Here we use the microphone to trigger some visual events
+;
+#X text 314 126 Sound input;
+#X text 226 176 low pass;
+#X text 352 172 high pass filter;
+#X text 336 207 detect volume;
+#X obj 29 162 gemwin 24;
+#X text 32 455 Challenge:;
+#X text 33 472 change the color of the objects dependng on the volume
+;
+#X text 34 488 use;
+#X obj 116 490 colorRGB;
+#X obj 58 490 color;
+#X text 98 489 or;
+#X text 172 491 .;
+#X obj 324 13 declare -lib Gem;
+#X text 28 619 Max Neupert \, GMU - Bauhaus University Weimar 2008
+- 2012;
+#X connect 2 0 25 0;
+#X connect 3 0 25 0;
+#X connect 4 0 9 0;
+#X connect 5 0 8 0;
+#X connect 5 0 16 0;
+#X connect 6 0 11 0;
+#X connect 7 0 15 0;
+#X connect 8 0 6 0;
+#X connect 9 0 14 0;
+#X connect 10 0 9 2;
+#X connect 11 0 10 0;
+#X connect 13 0 12 2;
+#X connect 14 0 12 0;
+#X connect 15 0 13 0;
+#X connect 16 0 7 0;
+#X connect 17 0 18 0;

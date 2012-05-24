@@ -1,0 +1,80 @@
+#N canvas 543 80 627 657 10;
+#X declare -lib Gem;
+#X obj 28 7 cnv 15 400 50 empty empty 10 14 24 0 24 -175655 -66577
+0;
+#X text 75 16 Pure data + Gem;
+#X msg 29 106 create \, 1;
+#X msg 37 132 0 \, destroy;
+#X obj 136 178 pix_video;
+#X text 28 539 Challenge:;
+#X obj 29 162 gemwin 12;
+#X floatatom 164 356 5 0 0 0 - - -;
+#X obj 119 323 pix_data;
+#X obj 134 238 pix_separator;
+#X obj 119 134 t b a b b;
+#X msg 170 266 0.5;
+#X msg 153 293 0.5;
+#X text 75 29 check one Pixel for it's value;
+#X text 29 67 We can check one pixel for it's color and luminance like
+this:;
+#X obj 141 386 unpack f f f;
+#X floatatom 141 415 5 0 0 0 - - -;
+#X floatatom 175 415 5 0 0 0 - - -;
+#X floatatom 210 415 5 0 0 0 - - -;
+#X text 27 555 1 Use the values to output some sound;
+#X text 27 569 2 Use the color values and visualize them with colored
+dots;
+#X text 201 356 alpha value;
+#X text 140 437 red;
+#X text 174 437 green;
+#X text 211 437 blue;
+#X obj 136 201 mn-flip;
+#X obj 119 112 gemhead;
+#X text 214 128 here we use the gemhead to trigger;
+#X text 213 142 on each render cycle;
+#X obj 241 230 cnv 15 100 80 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 245 260 pix_texture;
+#X obj 245 238 pix_separator;
+#X obj 245 284 rectangle 4 3;
+#X text 239 210 displays the image;
+#X obj 342 343 cnv 15 140 160 empty empty empty 20 12 0 14 -228856
+-66577 0;
+#X obj 346 478 square 0.04;
+#X obj 346 455 translateXYZ 1 1 0.01;
+#X obj 346 352 gemhead;
+#X text 341 311 the small square to indicate;
+#X text 342 323 where the color is detected;
+#X obj 98 600 pix_mean_color;
+#X text 27 584 3 compare the pixels color to the average color in the
+image using;
+#X obj 387 432 mn-coor_map;
+#X obj 324 13 declare -lib Gem;
+#X text 27 633 Max Neupert \, GMU - Bauhaus University Weimar 2008
+- 2012;
+#X connect 2 0 6 0;
+#X connect 3 0 6 0;
+#X connect 4 0 25 0;
+#X connect 8 1 15 0;
+#X connect 8 2 7 0;
+#X connect 9 0 8 1;
+#X connect 10 0 8 0;
+#X connect 10 1 4 0;
+#X connect 10 2 12 0;
+#X connect 10 3 11 0;
+#X connect 11 0 8 3;
+#X connect 11 0 42 1;
+#X connect 12 0 8 2;
+#X connect 12 0 42 0;
+#X connect 15 0 16 0;
+#X connect 15 1 17 0;
+#X connect 15 2 18 0;
+#X connect 25 0 9 0;
+#X connect 25 0 31 0;
+#X connect 26 0 10 0;
+#X connect 30 0 32 0;
+#X connect 31 0 30 0;
+#X connect 36 0 35 0;
+#X connect 37 0 36 0;
+#X connect 42 0 36 1;
+#X connect 42 1 36 2;
