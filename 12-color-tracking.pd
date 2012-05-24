@@ -1,0 +1,152 @@
+#N canvas 504 22 904 961 10;
+#X declare -lib Gem;
+#X msg 334 91 0 \, destroy;
+#X obj 327 114 gemwin 12;
+#X obj 9 13 cnv 15 400 50 empty empty 12 14 24 0 24 -175655 -66577
+0;
+#X text 73 23 Pure data + Gem;
+#X msg 327 70 create \, 1;
+#X obj 303 19 declare -lib Gem;
+#X obj 12 84 gemhead;
+#X obj 12 107 pix_video;
+#X obj 12 151 t a a a a;
+#X obj 12 129 pix_rgba;
+#X obj 136 815 pix_texture;
+#X obj 238 380 pix_threshold;
+#X obj 313 224 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 8100 1;
+#X obj 238 359 pix_gain;
+#X obj 238 202 pix_separator;
+#X obj 12 814 pix_texture;
+#X msg 249 332 0 1 0;
+#X obj 238 416 pix_add;
+#X obj 136 505 pix_gain;
+#X obj 136 529 pix_subtract;
+#X obj 238 504 pix_gain;
+#X obj 238 438 pix_2grey;
+#X msg 283 482 0 0 10;
+#X msg 181 480 0 0 1;
+#X obj 136 591 pix_threshold;
+#X obj 249 309 loadbang;
+#X obj 390 381 pix_threshold;
+#X obj 465 224 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 900 1;
+#X obj 390 360 pix_gain;
+#X obj 390 201 pix_separator;
+#X obj 399 312 loadbang;
+#X msg 399 333 1 0 0;
+#X obj 283 462 loadbang;
+#X obj 181 456 loadbang;
+#X obj 214 550 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 3100 1;
+#X msg 211 569 0 0 \$1;
+#X msg 313 359 0 \$1 0;
+#X msg 465 360 \$1 0 0;
+#X obj 146 693 gemhead;
+#X obj 321 705 vsl 15 140 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 306 857 >;
+#X obj 136 613 pix_blob;
+#X text 351 514 4 slide this slider until just before the object you
+are tracking disappears;
+#X obj 12 224 separator;
+#X obj 12 201 pix_separator;
+#X obj 12 838 rectangle 2 1.5;
+#X obj 12 791 translateXYZ -2 0 0;
+#X obj 136 791 translateXYZ 2 0 0;
+#X obj 136 839 rectangle 2 1.5;
+#X obj 203 671 * 4;
+#X obj 229 671 * -3;
+#X obj 229 693 + 1.5;
+#X obj 136 223 separator;
+#X obj 136 202 pix_separator;
+#X obj 339 703 mapping/timeroll;
+#X obj 146 759 circle 0.1;
+#X obj 146 669 r \$0-dot;
+#X obj 306 879 s \$0-dot;
+#X obj 304 672 t f f;
+#X obj 146 732 translateXYZ 0 0 0.01;
+#X obj 203 693 + 0;
+#X obj 304 650 * 25;
+#X text 551 817 this slider stops the rendering of the dot if the blob
+detection is below a certain threshold.;
+#X text 10 921 Max Neupert \, GMU - Bauhaus University Weimar 2012
+;
+#X text 550 774 5 move the object you are tracking so the webcam can
+no longer see it. Move this slider up until you are just at that point
+that the white dot stops jumping.;
+#X text 423 67 1 create gem window;
+#X text 502 219 3 slide both these sliders all the way up \, then find
+the lowest point you can have the sliders before you cannot see the
+object you are tracking in the left window.;
+#X text 424 104 2 hold object with primary color blue so you can see
+it in the right side of the window.;
+#X text 350 544 this slider turns all pixels in each image of the video
+that have less than a certain amount of blue to black.;
+#X text 503 279 these two sliders turn all pixels in each image of
+the video with red and green above a certain threshold to black.;
+#X text 9 907 John Harrison \, CRATEL - Wichita State University 2012
+;
+#X text 11 935 Public domain;
+#X text 72 35 Blue Color Tracking;
+#X text 464 902 CHALLENGE;
+#X text 465 916 Make a red or green color tracker;
+#X connect 0 0 1 0;
+#X connect 4 0 1 0;
+#X connect 6 0 7 0;
+#X connect 7 0 9 0;
+#X connect 8 0 44 0;
+#X connect 8 1 53 0;
+#X connect 8 2 14 0;
+#X connect 8 3 29 0;
+#X connect 9 0 8 0;
+#X connect 10 0 48 0;
+#X connect 11 0 17 0;
+#X connect 12 0 36 0;
+#X connect 13 0 11 0;
+#X connect 14 0 13 0;
+#X connect 15 0 45 0;
+#X connect 16 0 13 2;
+#X connect 17 0 21 0;
+#X connect 18 0 19 0;
+#X connect 19 0 24 0;
+#X connect 20 0 19 1;
+#X connect 21 0 20 0;
+#X connect 22 0 20 2;
+#X connect 23 0 18 2;
+#X connect 24 0 41 0;
+#X connect 25 0 16 0;
+#X connect 26 0 17 1;
+#X connect 27 0 37 0;
+#X connect 28 0 26 0;
+#X connect 29 0 28 0;
+#X connect 30 0 31 0;
+#X connect 31 0 28 2;
+#X connect 32 0 22 0;
+#X connect 33 0 23 0;
+#X connect 34 0 35 0;
+#X connect 35 0 24 2;
+#X connect 36 0 11 2;
+#X connect 37 0 26 2;
+#X connect 38 0 59 0;
+#X connect 39 0 40 1;
+#X connect 40 0 57 0;
+#X connect 41 0 47 0;
+#X connect 41 1 49 0;
+#X connect 41 2 50 0;
+#X connect 41 3 61 0;
+#X connect 43 0 46 0;
+#X connect 44 0 43 0;
+#X connect 46 0 15 0;
+#X connect 47 0 10 0;
+#X connect 49 0 60 0;
+#X connect 50 0 51 0;
+#X connect 51 0 59 2;
+#X connect 52 0 18 0;
+#X connect 53 0 52 0;
+#X connect 56 0 38 0;
+#X connect 58 0 40 0;
+#X connect 58 1 54 0;
+#X connect 59 0 55 0;
+#X connect 60 0 59 1;
+#X connect 61 0 58 0;
