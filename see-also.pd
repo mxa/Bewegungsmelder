@@ -1,0 +1,7 @@
+#N canvas 519 127 693 555 10;
+#X declare -lib Gem;
+#X obj 93 142 pix_colorclassify;
+#X obj 448 32 declare -lib Gem;
+#X text 88 84 In the previous patches we only scratched the surface
+of what is possible with camera based input. You may also want to look
+at OpenCV for Pd \, Gridflow and;
