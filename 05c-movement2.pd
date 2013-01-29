@@ -1,4 +1,4 @@
-#N canvas 652 65 474 576 10;
+#N canvas 731 297 474 576 10;
 #X declare -lib Gem;
 #X obj 28 8 cnv 15 400 50 empty empty 5c 14 24 0 24 -175655 -66577
 0;
@@ -7,17 +7,17 @@
 #X msg 31 130 create \, 1;
 #X msg 39 156 0 \, destroy;
 #X obj 129 130 gemhead;
-#X obj 129 319 pix_texture;
-#X obj 129 379 rectangle 4 3;
+#X obj 129 373 pix_texture;
+#X obj 129 397 rectangle 4 3;
 #X text 237 125 This is a render-chain.;
 #X text 239 139 Always start it with gemhead.;
 #X text 237 168 takes the video image from your camera;
-#X text 241 323 textures the video image;
-#X text 242 381 onto an rectangle;
+#X text 241 373 textures the video image;
+#X text 242 399 onto an rectangle;
 #X obj 129 195 pix_rgba;
 #X text 237 197 converts the colorspace;
-#X obj 129 293 alpha;
-#X obj 172 293 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 129 311 alpha;
+#X obj 139 290 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X text 265 265 compares the frames;
 #X text 240 292 enables the alpha channel;
@@ -28,7 +28,7 @@
 #X text 123 438 to express the detected movement in a number.;
 #X text 35 419 Challenge:;
 #X obj 129 167 pix_video;
-#X obj 129 349 mn-flip;
+#X obj 129 343 mn-flip;
 #X floatatom 190 242 5 0 1 0 - - -;
 #X text 29 67 the pix_movement2 object allows a lower and higher threshold
 ;
@@ -41,12 +41,12 @@
 #X connect 3 0 2 0;
 #X connect 4 0 2 0;
 #X connect 5 0 24 0;
-#X connect 6 0 25 0;
+#X connect 6 0 7 0;
 #X connect 13 0 28 0;
-#X connect 15 0 6 0;
+#X connect 15 0 25 0;
 #X connect 16 0 15 0;
 #X connect 24 0 13 0;
-#X connect 25 0 7 0;
+#X connect 25 0 6 0;
 #X connect 26 0 28 1;
 #X connect 28 0 15 0;
 #X connect 29 0 28 2;
