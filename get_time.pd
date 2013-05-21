@@ -1,0 +1,8 @@
+#N canvas -822 162 372 105 10;
+#X obj 111 21 r reset_time;
+#X obj 187 56 realtime;
+#X obj 232 6 inlet;
+#X obj 187 79 outlet;
+#X connect 0 0 1 0;
+#X connect 1 0 3 0;
+#X connect 2 0 1 1;
