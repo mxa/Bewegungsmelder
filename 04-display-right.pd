@@ -32,8 +32,8 @@ it in such a way that the image becomes mirrored. Save it.;
 #X text 25 540 Challenge:;
 #X text 235 344 edit this one!;
 #X obj 320 22 declare -lib Gem;
-#X text 29 684 Max Neupert \, GMU - Bauhaus-University Weimar 2008
-- 2012;
+#X text 29 684 Max Neupert \, GMU - Bauhaus-Universität Weimar 2008-2012
+;
 #X connect 3 0 2 0;
 #X connect 4 0 2 0;
 #X connect 5 0 6 0;

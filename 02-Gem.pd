@@ -2,8 +2,6 @@
 #X declare -lib Gem;
 #X obj 28 8 cnv 15 400 50 empty empty 2 14 24 0 24 -175655 -66577 0
 ;
-#X text 33 550 Max Neupert \, GMU - Bauhaus University Weimar 2008
-;
 #X text 75 16 Pure data + Gem;
 #X obj 37 345 gemwin;
 #X msg 37 289 create \, 1;
@@ -32,5 +30,7 @@ a window and start rendering;
 #X obj 33 144 declare -lib Gem;
 #X text 32 110 To tell Pd to load the Gem library we need to declare
 it for the current patch:;
-#X connect 4 0 3 0;
-#X connect 5 0 3 0;
+#X text 33 550 Max Neupert \, GMU - Bauhaus-Universität Weimar 2008
+;
+#X connect 3 0 2 0;
+#X connect 4 0 2 0;

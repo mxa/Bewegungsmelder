@@ -16,7 +16,7 @@
 #X obj 136 363 glsl_fragment;
 #X msg 446 566 keyRange \$1;
 #X obj 449 527 hsl 99 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 200 1;
+-1 -1 0 1;
 #X floatatom 454 547 5 0 0 0 - - -;
 #X obj 327 542 pack f f f;
 #X msg 327 565 keyColor \$1 \$2 \$3;
@@ -64,14 +64,14 @@ Language (GLSL) to do the keying with pixel shaders.;
 #X text 286 199 Jacks;
 #X text 287 209 shader;
 #X obj 327 384 vsl 15 101 0 1 0 0 empty empty empty 0 -9 0 10 -258113
--1 -1 4980 1;
+-1 -1 0 1;
 #X obj 342 384 vsl 15 101 0 1 0 0 empty empty empty 0 -9 0 10 -4034
--1 -1 5137 1;
+-1 -1 0 1;
 #X obj 357 384 vsl 15 101 0 1 0 0 empty empty empty 0 -9 0 10 -4160
--1 -1 4745 1;
+-1 -1 0 1;
 #X obj 321 19 declare -lib Gem;
-#X text 40 703 Max Neupert \, GMU - Bauhaus University Weimar 2009
-- 2012 / Jack/RYBN 2009;
+#X text 40 703 Max Neupert \, GMU - Bauhaus-Universität Weimar 2009-2012
+/ Jack/RYBN 2009;
 #X connect 0 0 19 0;
 #X connect 1 0 35 0;
 #X connect 2 0 6 0;

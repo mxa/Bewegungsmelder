@@ -50,9 +50,9 @@
 #X obj 258 720 *~ 0.5;
 #X text 8 441 set the threshold with the slider;
 #X obj 126 182 pix_movement 0.05;
-#X text 24 774 Max Neupert \, GMU - Bauhaus University Weimar 2008
-- 2013;
 #X text 433 79 when the patch is opened;
+#X text 24 774 Max Neupert \, GMU - Bauhaus Universität Weimar 2008-2013
+;
 #X connect 2 0 40 0;
 #X connect 3 0 40 0;
 #X connect 4 0 5 0;

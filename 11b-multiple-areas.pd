@@ -98,8 +98,8 @@
 #X text 93 32 cropping image areas to analyze;
 #X text 152 144 threshold for the motion detection;
 #X obj 324 16 declare -lib Gem;
-#X text 30 769 Max Neupert \, GMU - Bauhaus University Weimar 2010
-- 2012;
+#X text 30 769 Max Neupert \, GMU - Bauhaus Universität Weimar 2010-2012
+;
 #X connect 0 0 2 0;
 #X connect 1 0 5 0;
 #X connect 5 0 10 0;

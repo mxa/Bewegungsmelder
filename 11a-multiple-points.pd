@@ -26,7 +26,7 @@
 #X obj 16 150 gemwin 12;
 #X obj 35 441 pix_rgba;
 #X obj 111 651 > 0.5;
-#X obj 111 673 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 111 673 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 65 534 list prepend;
 #X obj 168 521 rectangle 4 3;
@@ -117,12 +117,12 @@ spot;
 1 \, 4 0.8 0.7 1 1 0;
 #X obj 101 347 pix_video;
 #X obj 313 15 declare -lib Gem;
-#X text 19 705 Max Neupert \, GMU - Bauhaus University Weimar 2008
-- 2012;
 #X text 30 625 cyan;
 #X text 36 646 red;
 #X text 21 585 yellow;
 #X text 27 607 blue;
+#X text 19 705 Max Neupert \, GMU - Bauhaus Universität Weimar 2008-2012
+;
 #X connect 0 0 23 0;
 #X connect 1 0 23 0;
 #X connect 2 0 9 0;

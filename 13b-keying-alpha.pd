@@ -24,7 +24,7 @@
 #X obj 334 139 pix_image brightonbeach.jpg;
 #X obj 334 187 translateXYZ 0 0 -0.001;
 #X obj 126 433 hsl 100 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 2500 1;
+-1 -1 0 1;
 #X obj 272 502 gemhead;
 #X obj 272 545 colorRGB;
 #X obj 272 567 translateXYZ 0 -3.5 0;
@@ -93,8 +93,8 @@
 #X text 35 74 Click on the color in the Gem window which you want to
 key. This Approach leads to less smooth edges.;
 #X obj 324 13 declare -lib Gem;
-#X text 30 673 Max Neupert \, GMU - Bauhaus University Weimar 2009
-- 2012;
+#X text 30 673 Max Neupert \, GMU - Bauhaus-Universität Weimar 2009-2012
+;
 #X connect 2 0 8 0;
 #X connect 3 0 4 0;
 #X connect 4 0 7 0;

@@ -14,7 +14,7 @@
 #X obj 136 815 pix_texture;
 #X obj 238 380 pix_threshold;
 #X obj 313 224 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 8100 1;
+-1 -1 0 1;
 #X obj 238 359 pix_gain;
 #X obj 238 202 pix_separator;
 #X obj 12 814 pix_texture;
@@ -30,7 +30,7 @@
 #X obj 249 309 loadbang;
 #X obj 390 381 pix_threshold;
 #X obj 465 224 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 900 1;
+-1 -1 0 1;
 #X obj 390 360 pix_gain;
 #X obj 390 201 pix_separator;
 #X obj 399 312 loadbang;
@@ -38,7 +38,7 @@
 #X obj 283 462 loadbang;
 #X obj 181 456 loadbang;
 #X obj 214 550 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 3100 1;
+-1 -1 0 1;
 #X msg 211 569 0 0 \$1;
 #X msg 313 359 0 \$1 0;
 #X msg 465 360 \$1 0 0;
@@ -70,8 +70,6 @@ are tracking disappears;
 #X obj 304 650 * 25;
 #X text 551 817 this slider stops the rendering of the dot if the blob
 detection is below a certain threshold.;
-#X text 10 921 Max Neupert \, GMU - Bauhaus University Weimar 2012
-;
 #X text 550 774 5 move the object you are tracking so the webcam can
 no longer see it. Move this slider up until you are just at that point
 that the white dot stops jumping.;
@@ -91,6 +89,8 @@ the video with red and green above a certain threshold to black.;
 #X text 72 35 Blue Color Tracking;
 #X text 464 902 CHALLENGE;
 #X text 465 916 Make a red or green color tracker;
+#X text 10 921 Max Neupert \, GMU - Bauhaus-Universität Weimar 2012
+;
 #X connect 0 0 1 0;
 #X connect 4 0 1 0;
 #X connect 6 0 7 0;

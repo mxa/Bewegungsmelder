@@ -36,8 +36,8 @@
 #X obj 309 19 declare -lib Gem;
 #X text 16 70 Keying two images together is quite easy. This one is
 heavily inspired by the helppatch of pix_chroma_key.;
-#X text 24 502 Max Neupert \, GMU - Bauhaus University Weimar 2009
-- 2012;
+#X text 24 502 Max Neupert \, GMU - Bauhaus-Universität Weimar 2009-2012
+;
 #X connect 3 0 2 0;
 #X connect 4 0 2 0;
 #X connect 5 0 2 0;

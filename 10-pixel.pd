@@ -50,8 +50,8 @@ dots;
 image using;
 #X obj 387 432 mn-coor_map;
 #X obj 324 13 declare -lib Gem;
-#X text 27 633 Max Neupert \, GMU - Bauhaus University Weimar 2008
-- 2012;
+#X text 27 633 Max Neupert \, GMU - Bauhaus Universität Weimar 2008-2012
+;
 #X connect 2 0 6 0;
 #X connect 3 0 6 0;
 #X connect 4 0 25 0;

@@ -36,8 +36,6 @@ frame of the video with the previous frame.;
 #X text 18 413 Other objects to try:;
 #X obj 111 293 pix_diff;
 #X text 291 249 # of frames – drag here!;
-#X text 16 567 Max Neupert \, GMU - Bauhaus University Weimar 2008
-- 2012;
 #N canvas 1100 499 450 300 init 0;
 #X obj 13 9 declare -lib Gem;
 #X obj 14 43 loadbang;
@@ -46,6 +44,8 @@ frame of the video with the previous frame.;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
 #X restore 310 36 pd init;
+#X text 16 567 Max Neupert \, GMU - Bauhaus-Universität Weimar 2008-2012
+;
 #X connect 3 0 2 0;
 #X connect 4 0 2 0;
 #X connect 9 0 31 1;

@@ -2,8 +2,6 @@
 #X obj 28 8 cnv 15 400 50 empty empty 1 14 24 0 24 -175655 -66577 0
 ;
 #X text 75 16 Pure data;
-#X text 29 585 Max Neupert \, GMU - Bauhaus University Weimar 2008
-;
 #X obj 99 243 cnv 15 55 24 empty empty empty 20 12 0 14 -33529 -66577
 0;
 #X obj 76 284 +;
@@ -41,9 +39,11 @@
 #X text 31 523 modify the addition patch above so both numbers trigger
 the calculation. Use the object trigger.;
 #X text 34 200 Objects receive messages to act upon.;
-#X connect 4 0 6 0;
-#X connect 5 0 4 1;
-#X connect 8 0 4 0;
-#X connect 26 0 28 0;
-#X connect 28 0 27 0;
-#X connect 28 1 27 0;
+#X text 29 585 Max Neupert \, GMU - Bauhaus-Universität Weimar 2008
+;
+#X connect 3 0 5 0;
+#X connect 4 0 3 1;
+#X connect 7 0 3 0;
+#X connect 25 0 27 0;
+#X connect 27 0 26 0;
+#X connect 27 1 26 0;

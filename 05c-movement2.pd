@@ -17,7 +17,7 @@
 #X obj 129 195 pix_rgba;
 #X text 237 197 converts the colorspace;
 #X obj 129 311 alpha;
-#X obj 139 290 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 139 290 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X text 265 265 compares the frames;
 #X text 240 292 enables the alpha channel;
@@ -36,8 +36,8 @@
 #X floatatom 252 242 5 0 1 0 - - -;
 #X text 292 242 low and high thresholds;
 #X obj 325 11 declare -lib Gem;
-#X text 29 549 Max Neupert \, GMU - Bauhaus University Weimar 2008
-- 2012;
+#X text 29 549 Max Neupert \, GMU - Bauhaus-Universität Weimar 2008-2012
+;
 #X connect 3 0 2 0;
 #X connect 4 0 2 0;
 #X connect 5 0 24 0;
