@@ -2,7 +2,6 @@
 #X declare -lib Gem;
 #X obj 28 8 cnv 15 400 50 empty empty 4 14 24 0 24 -175655 -66577 0
 ;
-#X text 75 16 Pure data + Gem;
 #X obj 29 263 gemwin;
 #X msg 29 207 create \, 1;
 #X msg 37 233 0 \, destroy;
@@ -34,9 +33,10 @@ it in such a way that the image becomes mirrored. Save it.;
 #X obj 320 22 declare -lib Gem;
 #X text 29 684 Max Neupert \, GMU - Bauhaus-Universität Weimar 2008-2012
 ;
-#X connect 3 0 2 0;
-#X connect 4 0 2 0;
+#X text 75 16 Pure Data + Gem;
+#X connect 2 0 1 0;
+#X connect 3 0 1 0;
+#X connect 4 0 5 0;
 #X connect 5 0 6 0;
-#X connect 6 0 7 0;
-#X connect 7 0 16 0;
-#X connect 16 0 8 0;
+#X connect 6 0 15 0;
+#X connect 15 0 7 0;

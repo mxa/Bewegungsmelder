@@ -1,4 +1,4 @@
-#N canvas 430 124 629 646 10;
+#N canvas 430 124 643 717 10;
 #X obj 11 18 inlet;
 #X text 11 2 bang:;
 #X obj 11 48 t b b;
@@ -38,6 +38,7 @@
 #X obj 433 254 tabread blob_times;
 #X obj 376 515 arraysize blob_times;
 #X msg 331 605 \; blob_times bounds 0 \$1 \$2 -1;
+#X text 13 652 Abstraction used in 07b-multi-blobtracker-IDs.pd;
 #X connect 0 0 2 0;
 #X connect 2 0 35 0;
 #X connect 2 0 6 0;

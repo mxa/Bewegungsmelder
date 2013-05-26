@@ -1,4 +1,4 @@
-#N canvas 544 653 376 260 10;
+#N canvas 544 653 383 329 10;
 #X obj 70 28 inlet;
 #X text 71 8 bang:;
 #X msg 70 60 1;
@@ -10,6 +10,7 @@
 #X obj 127 234 outlet;
 #X obj 127 208 expr if ($f1 == 0 \, $f2 \, -1);
 #X obj 70 160 exists_id;
+#X text 42 261 Abstraction used in 07b-multi-blobtracker-IDs.pd;
 #X connect 0 0 2 0;
 #X connect 2 0 3 0;
 #X connect 3 0 5 0;

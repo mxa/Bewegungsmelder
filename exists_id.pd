@@ -1,4 +1,4 @@
-#N canvas 317 53 413 428 10;
+#N canvas 317 53 429 462 10;
 #X obj 12 7 inlet;
 #X obj 12 83 arraysize blob_ids;
 #X floatatom 204 84 5 0 0 0 - - -;
@@ -18,6 +18,7 @@
 #X obj 51 302 max;
 #X obj 362 171 t f f;
 #X floatatom 362 128 5 0 0 0 - - -;
+#X text 13 423 Abstraction used in 07b-multi-blobtracker-IDs.pd;
 #X connect 0 0 7 0;
 #X connect 1 0 14 0;
 #X connect 2 0 12 1;
