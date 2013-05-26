@@ -89,10 +89,10 @@
 0;
 #X obj 32 359 pix_contrast;
 #X obj 69 270 hsl 99 15 0 10 0 0 empty contrast contrast -2 -8 0 10
--262144 -1 -1 1274 1;
+-262144 -1 -1 1074 1;
 #X floatatom 72 289 5 0 0 0 - - -;
 #X obj 104 319 hsl 99 15 0 10 0 0 empty saturation saturation -2 -8
-0 10 -262144 -1 -1 2450 1;
+0 10 -262144 -1 -1 2800 1;
 #X floatatom 108 340 5 0 0 0 - - -;
 #X obj 27 94 cnv 15 220 155 empty empty empty 20 12 0 14 -262130 -66577
 0;
@@ -142,8 +142,8 @@
 #X obj 142 550 cnv 15 220 130 empty empty empty 20 12 0 14 -203904
 -66577 0;
 #X msg 189 583 threshold \$1;
-#X msg 224 635 blobSize \$1;
-#X obj 227 617 hsl 99 15 0 1 0 0 empty blobsize blobsize -2 -8 0 10
+#X msg 213 637 blobSize \$1;
+#X obj 216 619 hsl 99 15 0 1 0 0 empty blobsize blobsize -2 -8 0 10
 -262144 -1 -1 1960 1;
 #X obj 192 565 hsl 99 15 0 1 0 0 empty threshold threshold -2 -8 0
 10 -262144 -1 -1 1470 1;
@@ -162,9 +162,9 @@
 #X obj 259 714 cnv 15 240 185 empty empty empty 20 12 0 14 -261234
 -66577 0;
 #X obj 291 730 hsl 128 15 0 1 0 0 empty border_area_size border_area_size
--2 -8 0 10 -262144 -1 -1 1270 1;
+-2 -8 0 10 -262144 -1 -1 2570 1;
 #X obj 316 780 hsl 128 15 0 15000 0 0 empty max_time_in_border_area
-max_time_in_border_area -2 -8 0 10 -262144 -1 -1 212 1;
+max_time_in_border_area -2 -8 0 10 -262144 -1 -1 1012 1;
 #X floatatom 320 800 15 0 0 0 - - -;
 #X floatatom 295 750 5 0 0 0 - - -;
 #X obj 264 927 cnv 15 235 75 empty empty empty 20 12 0 14 -261234 -66577
@@ -176,28 +176,28 @@ max_time_in_border_area -2 -8 0 10 -262144 -1 -1 212 1;
 #X obj 32 72 gemhead;
 #X obj 610 196 gemwin 25;
 #X obj 341 833 hsl 128 15 0 10000 0 0 empty max_time_at_all max_time_at_all
--2 -8 0 10 -262144 -1 -1 1270 1;
+-2 -8 0 10 -262144 -1 -1 2070 1;
 #X floatatom 347 852 15 0 0 0 - - -;
 #X text 625 36 revert to initial settings;
 #X text 173 389 <-- multiplying and unlinking the pixel and vertex
 content;
 #X msg 610 126 dimen 800 400 \, FSAA 4 \, view -4 0 4 0 \, create \,
 1;
-#N canvas 922 95 384 398 blob_lists 0;
+#N canvas 921 101 375 359 blob_lists 1;
 #X obj 17 16 inlet;
 #X obj 153 16 inlet;
 #X obj 189 16 inlet;
-#X obj 17 53 arraysize blob_ids;
-#X obj 17 112 until;
-#X obj 17 149 f;
-#X obj 17 81 t f b;
-#X msg 57 113 0;
-#X obj 65 149 + 1;
-#X obj 36 255 sel -1;
-#X obj 69 309 sel -1;
+#X obj 17 45 arraysize blob_ids;
+#X obj 17 104 until;
+#X obj 17 141 f;
+#X obj 17 73 t f b;
+#X msg 57 105 0;
+#X obj 65 141 + 1;
+#X obj 36 236 sel -1;
+#X obj 69 290 sel -1;
 #X obj 331 15 inlet;
-#X obj 17 181 t f f f;
-#X obj 214 307 sel -1;
+#X obj 17 173 t f f f;
+#X obj 214 288 sel -1;
 #N canvas 381 361 402 514 is_in_border_area 0;
 #X obj 48 15 inlet;
 #X obj 48 449 outlet;
@@ -232,7 +232,7 @@ content;
 #X connect 13 0 3 0;
 #X connect 13 0 6 3;
 #X connect 13 1 12 0;
-#X restore 36 215 pd is_in_border_area;
+#X restore 36 207 pd is_in_border_area;
 #N canvas 982 588 235 293 remove_blob 0;
 #X obj 11 8 inlet;
 #X obj 11 63 sel -1;
@@ -387,9 +387,9 @@ resize \$1 \; blob_times resize \$1;
 #X connect 2 1 5 0;
 #X connect 2 2 3 0;
 #X connect 6 0 1 0;
-#X restore 102 342 pd remove_blob;
-#X obj 69 281 older_than_threshold;
-#X obj 214 281 older_than_threshold;
+#X restore 102 323 pd remove_blob;
+#X obj 69 262 older_than_threshold;
+#X obj 214 262 older_than_threshold;
 #X connect 0 0 3 0;
 #X connect 1 0 14 1;
 #X connect 2 0 16 1;
