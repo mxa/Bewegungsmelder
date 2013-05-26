@@ -1,4 +1,4 @@
-#N canvas 578 180 445 482 10;
+#N canvas 578 180 470 486 10;
 #X obj 85 27 inlet;
 #X obj 53 385 outlet;
 #X obj 256 27 inlet;
@@ -32,6 +32,7 @@
 #X connect 1 0 3 0;
 #X connect 2 0 1 1;
 #X restore 102 146 pd get_time;
+#X text 158 398 Abstraction used in 07b-multi-blobtracker-IDs.pd;
 #X connect 0 0 11 0;
 #X connect 2 0 10 1;
 #X connect 3 0 4 1;
