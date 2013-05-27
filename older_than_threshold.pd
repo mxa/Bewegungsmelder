@@ -11,12 +11,12 @@
 #X msg 116 271 0;
 #X obj 204 118 f;
 #X obj 48 55 t f b f b;
-#N canvas 321 573 450 300 id_of_blob_by_index 0;
-#X obj 143 94 outlet;
-#X obj 143 14 inlet;
-#X obj 143 41 sel -1;
-#X msg 143 67 -1;
-#X obj 176 67 tabread blob_ids;
+#N canvas 321 573 202 161 id_of_blob_by_index 1;
+#X obj 21 96 outlet;
+#X obj 21 16 inlet;
+#X obj 21 43 sel -1;
+#X msg 21 69 -1;
+#X obj 54 69 tabread blob_ids;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
 #X connect 2 1 4 0;

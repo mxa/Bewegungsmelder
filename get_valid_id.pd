@@ -7,8 +7,8 @@
 #X obj 70 131 t f f;
 #X obj 103 87 +;
 #X msg 25 143 1;
-#X obj 127 234 outlet;
-#X obj 127 208 expr if ($f1 == 0 \, $f2 \, -1);
+#X obj 97 239 outlet;
+#X obj 97 213 expr if ($f1 == 0 \, $f2 \, -1);
 #X obj 70 160 exists_id;
 #X text 42 261 Abstraction used in 07b-multi-blobtracker-IDs.pd;
 #X connect 0 0 2 0;
