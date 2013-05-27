@@ -20,7 +20,7 @@
 #X obj 74 38 t b f b;
 #X obj 281 457 f;
 #X text 59 506 Abstraction used in 07b-multi-blobtracker-IDs.pd;
-#X obj 74 82 value blobIDs;
+#X obj 74 82 expr size("blob_ids");
 #X connect 0 0 18 0;
 #X connect 2 0 7 0;
 #X connect 3 0 2 0;
