@@ -1,4 +1,4 @@
-#N canvas 814 22 924 965 10;
+#N canvas 807 22 924 965 10;
 #X declare -lib Gem;
 #X obj 27 7 cnv 15 400 50 empty empty 7b 14 24 0 24 -175655 -66577
 0;
@@ -12,7 +12,7 @@
 #X text 433 92 replace [pix_film] with;
 #X text 435 134 for live video;
 #X text 433 252 you may also try:;
-#N canvas 845 38 402 614 init 0;
+#N canvas 845 38 402 614 init 1;
 #X obj 15 31 loadbang;
 #X obj 127 136 send contrast;
 #X obj 114 185 send saturation;
@@ -55,9 +55,9 @@
 #X obj 33 469 send maxTimeInBorderArea;
 #X obj 19 515 send maxTimeAtAll;
 #X obj 6 563 send maxManhattanDistance;
-#X msg 19 492 2000;
-#X msg 33 446 500;
-#X msg 46 399 0.5;
+#X msg 19 492 3700;
+#X msg 33 446 2500;
+#X msg 46 399 0.75;
 #X connect 0 0 17 0;
 #X connect 3 0 2 0;
 #X connect 4 0 1 0;
@@ -159,9 +159,9 @@
 #X obj 244 685 cnv 15 220 185 empty empty empty 20 12 0 14 -261234
 -66577 0;
 #X obj 275 701 hsl 128 15 0 1 0 0 empty borderAreaSize border_area_size
--2 -8 0 10 -262144 -1 -1 6350 1;
+-2 -8 0 10 -262144 -1 -1 9050 1;
 #X obj 283 753 hsl 151 15 0 15000 0 0 empty maxTimeInBorderArea max_time_in_border_area
--2 -8 0 10 -262144 -1 -1 500 1;
+-2 -8 0 10 -262144 -1 -1 2600 1;
 #X floatatom 421 773 6 0 0 0 - - -;
 #X floatatom 387 720 5 0 0 0 - - -;
 #X obj 244 874 cnv 15 220 75 empty empty empty 20 12 0 14 -261234 -66577
@@ -173,7 +173,7 @@
 #X obj 32 72 gemhead;
 #X obj 610 196 gemwin 25;
 #X obj 290 806 hsl 101 15 0 10000 0 0 empty maxTimeAtAll max_time_at_all
--2 -8 0 10 -262144 -1 -1 2000 1;
+-2 -8 0 10 -262144 -1 -1 3800 1;
 #X floatatom 387 826 6 0 0 0 - - -;
 #X text 625 36 revert to initial settings;
 #X text 173 389 <-- multiplying and unlinking the pixel and vertex
@@ -506,8 +506,8 @@ Weimar 2013;
 #X obj 24 286 rectangle 0.6 0.01;
 #X msg 75 451 9;
 #X obj 24 350 translateXYZ 0.2 0.4 0;
-#X obj 24 217 gemhead 90;
 #X obj 24 73 index_of_blob;
+#X obj 24 217 gemhead;
 #X connect 0 0 14 0;
 #X connect 1 0 3 0;
 #X connect 2 0 8 0;
@@ -517,22 +517,22 @@ Weimar 2013;
 #X connect 6 0 17 0;
 #X connect 7 0 5 1;
 #X connect 8 0 7 0;
-#X connect 9 0 20 0;
+#X connect 9 0 21 0;
 #X connect 9 1 2 0;
 #X connect 9 2 1 0;
 #X connect 10 0 13 0;
 #X connect 11 0 12 0;
 #X connect 11 0 18 0;
 #X connect 12 0 13 0;
-#X connect 14 0 21 0;
+#X connect 14 0 20 0;
 #X connect 14 1 15 0;
 #X connect 15 0 13 0;
 #X connect 16 0 19 0;
 #X connect 17 0 16 0;
 #X connect 18 0 13 1;
 #X connect 19 0 10 0;
-#X connect 20 0 5 0;
-#X connect 21 0 9 0;
+#X connect 20 0 9 0;
+#X connect 21 0 5 0;
 #X restore 88 215 pd draw_blob;
 #X obj 49 186 moses 1;
 #X obj 22 39 expr size("blob_ids");
