@@ -1,0 +1,243 @@
+#N canvas 403 104 748 794 10;
+#X declare -lib Gem;
+#X msg 40 127 0 \, destroy;
+#X obj 446 116 gemhead;
+#X obj 30 10 cnv 15 400 50 empty empty 11c 14 24 0 24 -175655 -66577
+0;
+#X obj 116 185 s \$0-threshold;
+#X floatatom 116 146 5 0 100 0 - - -;
+#X obj 116 165 / 100;
+#X obj 116 106 loadbang;
+#X msg 116 126 4;
+#X msg 33 106 create \, 1;
+#X text 152 144 threshold for the motion detection;
+#X obj 324 16 declare -lib Gem;
+#X text 94 20 Pure Data + Gem;
+#X obj 446 181 pix_texture;
+#X text 93 32 defining an area with a polygon;
+#X obj 446 206 rectangle 4 3;
+#X text 30 759 Ives Schachtschabel \, GMU - Bauhaus-Universität Weimar
+2013;
+#X obj 446 139 pix_video;
+#X obj 112 457 pack f f;
+#X text 201 412 input needs to be a 2-element-list:;
+#X floatatom 229 348 5 0 100 0 - - -;
+#X floatatom 112 348 5 0 100 0 - - -;
+#X obj 130 424 t b f;
+#X text 96 347 x;
+#X text 265 347 y;
+#X text 201 467 normalized range (0 - 1);
+#N canvas 1350 131 349 377 show-target 0;
+#X obj 54 311 pix_texture;
+#X obj 54 251 translateXYZ;
+#X obj 54 281 colorRGB 1 0 0 0;
+#X obj 54 52 gemhead 80;
+#X obj 54 334 circle 0.1;
+#N canvas 493 453 450 393 scaling_windowsize 0;
+#X obj 91 235 * 8;
+#X obj 91 265 - 4;
+#X obj 91 22 inlet;
+#X obj 304 22 inlet;
+#X obj 91 345 outlet;
+#X obj 337 345 outlet;
+#X obj 202 121 unpack;
+#X obj 325 138 t f f;
+#X obj 125 138 t f f;
+#X obj 106 178 * 2;
+#X obj 337 275 - 4;
+#X obj 304 235 * 8;
+#X obj 319 180 * 2;
+#X obj 202 70 r windowsize;
+#X connect 0 0 1 0;
+#X connect 1 0 4 0;
+#X connect 2 0 0 0;
+#X connect 3 0 11 0;
+#X connect 6 0 8 0;
+#X connect 6 1 7 0;
+#X connect 7 0 12 0;
+#X connect 7 1 10 1;
+#X connect 8 0 9 0;
+#X connect 8 1 1 1;
+#X connect 9 0 0 1;
+#X connect 10 0 5 0;
+#X connect 11 0 10 0;
+#X connect 12 0 11 1;
+#X connect 13 0 6 0;
+#X restore 77 219 pd scaling_windowsize;
+#X obj 77 81 inlet;
+#X obj 77 111 unpack f f;
+#X obj 134 151 swap 1;
+#X obj 134 181 -;
+#X connect 0 0 4 0;
+#X connect 1 0 2 0;
+#X connect 2 0 0 0;
+#X connect 3 0 1 0;
+#X connect 5 0 1 1;
+#X connect 5 1 1 2;
+#X connect 6 0 7 0;
+#X connect 7 0 5 0;
+#X connect 7 1 8 0;
+#X connect 8 0 9 0;
+#X connect 8 1 9 1;
+#X connect 9 0 5 1;
+#X restore 178 505 pd show-target;
+#N canvas 1198 191 350 516 target-simulation 0;
+#X obj 64 270 random 1000;
+#X obj 64 300 / 1000;
+#X obj 64 430 line;
+#X obj 64 470 outlet;
+#X obj 154 270 random 1000;
+#X obj 154 300 / 1000;
+#X obj 154 430 line;
+#X obj 154 470 outlet;
+#X obj 64 180 t b b;
+#X obj 64 80 t b b;
+#X obj 64 140 spigot;
+#X obj 64 10 inlet;
+#X obj 226 57 sel 0;
+#X msg 226 392 stop;
+#X obj 97 110 random 2;
+#X obj 64 361 +;
+#X obj 154 361 +;
+#X msg 64 396 \$1 500;
+#X msg 154 396 \$1 500;
+#X obj 64 331 * 0.5;
+#X obj 94 361 * 0.5;
+#X obj 154 331 * 0.5;
+#X obj 184 361 * 0.5;
+#X obj 64 50 metro 250;
+#X connect 0 0 1 0;
+#X connect 1 0 19 0;
+#X connect 2 0 3 0;
+#X connect 4 0 5 0;
+#X connect 5 0 21 0;
+#X connect 6 0 7 0;
+#X connect 8 0 0 0;
+#X connect 8 1 4 0;
+#X connect 9 0 10 0;
+#X connect 9 1 14 0;
+#X connect 10 0 8 0;
+#X connect 11 0 12 0;
+#X connect 11 0 23 0;
+#X connect 12 0 13 0;
+#X connect 13 0 2 0;
+#X connect 13 0 6 0;
+#X connect 14 0 10 1;
+#X connect 15 0 17 0;
+#X connect 15 0 20 0;
+#X connect 16 0 18 0;
+#X connect 16 0 22 0;
+#X connect 17 0 2 0;
+#X connect 18 0 6 0;
+#X connect 19 0 15 0;
+#X connect 20 0 15 1;
+#X connect 21 0 16 0;
+#X connect 22 0 16 1;
+#X connect 23 0 9 0;
+#X restore 112 301 pd target-simulation;
+#X text 201 434 x/y-pair \, which represents the position of the tracked
+target;
+#X obj 112 269 tgl 15 0 empty empty empty 17 7 0 10 -204786 -1 -1 0
+1;
+#X text 129 267 simulation on/off;
+#X obj 101 613 cnv 15 260 40 empty empty empty 20 12 0 14 -191407 -66577
+0;
+#X obj 299 302 s windowsize;
+#X msg 299 269 4 4;
+#X text 345 262 it´s important to give information about the size
+of the GEM-window \, so the scaling is done right. default is 4 x 4
+;
+#N canvas 973 322 407 216 loadbang 0;
+#X msg 17 116 \; area_2 -2.144 -1.6 0.496 -1.584 -0.608 -2.688 -3.216
+-2.672;
+#X msg 17 76 \; area_1 0.816 1.888 1.584 2.384 3.168 0.8 2.448 0.256
+;
+#X msg 17 156 \; area_3 -1.056 1.936 1.616 -0.208 0.688 -1.024 -1.072
+-1.008;
+#X obj 100 22 loadbang;
+#X obj 100 52 del 1000;
+#X connect 3 0 4 0;
+#X connect 4 0 1 0;
+#X connect 4 0 0 0;
+#X connect 4 0 2 0;
+#X restore 654 23 pd loadbang;
+#X obj 106 691 cnv 15 250 40 empty empty empty 20 12 0 14 -204786 -66577
+0;
+#N canvas 911 116 732 594 more-things-that-are-worth-knowing 0;
+#X obj -115 188 s area_1;
+#X floatatom -115 33 5 -4 4 0 - - -;
+#X msg -115 133 \$1 \$2 1.584 2.384 3.168 0.8 2.448 0.256;
+#X obj -115 98 pack f f;
+#X floatatom -70 33 5 -4 4 0 - - -;
+#X obj -70 59 t b f;
+#X text -43 182 you have to specify which area should be changed \,
+by applying the desired index;
+#X obj -107 418 bng 15 250 50 0 empty empty empty 17 7 0 10 -191407
+-1 -1;
+#X text -73 430 if you need it for some reasons \, you can reset the
+area to its initial position;
+#X obj -112 305 s area_save;
+#X obj -112 265 bng 15 250 50 0 empty empty empty 17 7 0 10 -258113
+-1 -1;
+#X text -86 259 when you have placed all desired sensitive areas \,
+you can (kind of) save their positions.;
+#X obj -112 335 r area_preset;
+#X obj -112 367 print;
+#X text -20 333 the lists \, containing the area-position-data \, can
+be printed (or else);
+#X text 131 293 ++ this whole thing needs further improvement \, but
+this should be easy;
+#X text -4 62 you can change the tracked area´s shape from within
+the patch. mainly this is usefull for making (loading) presets \, but
+it also can be used for more creative things!;
+#X obj -107 464 s area_reset_1;
+#X obj -106 526 tgl 20 0 empty empty empty 17 7 0 10 -204786 -1 -1
+0 1;
+#X obj -106 564 s mouse_test;
+#X text -84 521 debug-mode;
+#X text -84 533 (or mouse-area-detection);
+#X connect 1 0 3 0;
+#X connect 2 0 0 0;
+#X connect 3 0 2 0;
+#X connect 4 0 5 0;
+#X connect 5 0 3 0;
+#X connect 5 1 3 1;
+#X connect 7 0 17 0;
+#X connect 10 0 9 0;
+#X connect 12 0 13 0;
+#X connect 18 0 19 0;
+#X restore 115 703 pd more-things-that-are-worth-knowing;
+#X obj 112 661 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 231 661 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 349 664 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 33 150 gemwin 18;
+#X obj 349 626 quadrilateral_area;
+#X obj 231 627 quadrilateral_area;
+#X obj 112 625 quadrilateral_area;
+#X connect 0 0 40 0;
+#X connect 1 0 16 0;
+#X connect 4 0 5 0;
+#X connect 5 0 3 0;
+#X connect 6 0 7 0;
+#X connect 7 0 4 0;
+#X connect 8 0 40 0;
+#X connect 12 0 14 0;
+#X connect 16 0 12 0;
+#X connect 17 0 25 0;
+#X connect 17 0 41 0;
+#X connect 17 0 42 0;
+#X connect 17 0 43 0;
+#X connect 19 0 21 0;
+#X connect 20 0 17 0;
+#X connect 21 0 17 0;
+#X connect 21 1 17 1;
+#X connect 26 0 20 0;
+#X connect 26 1 19 0;
+#X connect 28 0 26 0;
+#X connect 32 0 31 0;
+#X connect 41 0 39 0;
+#X connect 42 0 38 0;
+#X connect 43 0 37 0;

@@ -1,10 +1,10 @@
-#N canvas 807 22 924 965 10;
+#N canvas 523 22 924 965 10;
 #X declare -lib Gem;
 #X obj 27 7 cnv 15 400 50 empty empty 7b 14 24 0 24 -175655 -66577
 0;
 #X obj 604 12 declare -lib Gem;
-#X obj 149 759 pix_texture;
-#X obj 149 786 rectangle 4 3;
+#X obj 369 683 pix_texture;
+#X obj 369 710 rectangle 4 3;
 #X obj 434 275 pix_gain;
 #X obj 434 303 pix_levels;
 #X obj 434 332 pix_curve;
@@ -58,6 +58,9 @@
 #X msg 19 492 3700;
 #X msg 33 446 2500;
 #X msg 46 399 0.75;
+#X text 39 39 comment;
+#X text 39 39 comment;
+#X text 39 39 comment;
 #X connect 0 0 17 0;
 #X connect 3 0 2 0;
 #X connect 4 0 1 0;
@@ -82,8 +85,8 @@
 #X connect 23 0 19 0;
 #X connect 24 0 18 0;
 #X restore 605 59 pd init;
-#X obj 32 757 pix_texture;
-#X obj 32 787 rectangle 4 3;
+#X obj 32 690 pix_texture;
+#X obj 32 720 rectangle 4 3;
 #X obj 27 253 cnv 15 220 130 empty empty empty 20 12 0 14 -204786 -66577
 0;
 #X obj 32 359 pix_contrast;
@@ -122,59 +125,59 @@
 #X msg 623 149 0 \, destroy;
 #X text 610 105 window control (click this!);
 #X text 433 71 suggestions:;
-#X obj 142 417 cnv 15 220 130 empty empty empty 20 12 0 14 -204800
+#X obj 142 410 cnv 15 220 125 empty empty empty 20 12 0 14 -204800
 -66577 0;
-#X obj 149 525 pix_movement2;
-#X floatatom 192 453 5 0 0 0 - - -;
-#X floatatom 232 505 5 0 0 0 - - -;
-#X obj 227 486 hsl 99 15 0 1 0 0 empty high_threshold high_threshold
+#X obj 149 512 pix_movement2;
+#X floatatom 192 444 5 0 0 0 - - -;
+#X floatatom 232 492 5 0 0 0 - - -;
+#X obj 227 473 hsl 99 15 0 1 0 0 empty high_threshold high_threshold
 -2 -8 0 10 -262144 -1 -1 9800 1;
-#X obj 189 435 hsl 99 15 0 1 0 0 empty low_threshold low_threshold
+#X obj 189 426 hsl 99 15 0 1 0 0 empty low_threshold low_threshold
 -2 -8 0 10 -262144 -1 -1 392 1;
-#X text 371 414 movement detection;
-#X text 372 428 (difference between subsequent frames);
-#X text 373 457 high can't be smaller than low!;
+#X text 371 407 movement detection;
+#X text 372 421 (difference between subsequent frames);
+#X text 373 450 high can't be smaller than low!;
 #X obj 82 99 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X text 103 97 open video file;
-#X obj 142 550 cnv 15 220 130 empty empty empty 20 12 0 14 -203904
+#X obj 142 539 cnv 15 220 125 empty empty empty 20 12 0 14 -203904
 -66577 0;
-#X msg 189 583 threshold \$1;
-#X msg 213 637 blobSize \$1;
-#X obj 216 619 hsl 99 15 0 1 0 0 empty blobsize blobsize -2 -8 0 10
+#X msg 189 572 threshold \$1;
+#X msg 213 623 blobSize \$1;
+#X obj 216 605 hsl 99 15 0 1 0 0 empty blobsize blobsize -2 -8 0 10
 -262144 -1 -1 1960 1;
-#X obj 192 565 hsl 99 15 0 1 0 0 empty threshold threshold -2 -8 0
+#X obj 192 554 hsl 99 15 0 1 0 0 empty threshold threshold -2 -8 0
 10 -262144 -1 -1 1470 1;
-#X text 367 548 blob detection;
-#X text 364 562 (groups of adjacent pixels are a blob);
+#X text 367 541 blob detection;
+#X text 364 555 (groups of adjacent pixels are a blob);
 #X text 710 11 load Gem library;
 #X text 252 73 explanation:;
-#X text 31 807 the left image;
-#X text 31 822 processed;
-#X text 143 805 the right image;
-#X text 144 824 blobs;
+#X text 31 740 the left image;
+#X text 31 755 processed;
+#X text 363 729 the right image;
+#X text 364 748 blobs;
 #X obj 54 201 unpack f f f;
 #X obj 605 38 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 244 685 cnv 15 220 185 empty empty empty 20 12 0 14 -261234
+#X obj 142 687 cnv 15 220 185 empty empty empty 20 12 0 14 -261234
 -66577 0;
-#X obj 275 701 hsl 128 15 0 1 0 0 empty borderAreaSize border_area_size
--2 -8 0 10 -262144 -1 -1 9050 1;
-#X obj 283 753 hsl 151 15 0 15000 0 0 empty maxTimeInBorderArea max_time_in_border_area
--2 -8 0 10 -262144 -1 -1 2600 1;
-#X floatatom 421 773 6 0 0 0 - - -;
-#X floatatom 387 720 5 0 0 0 - - -;
-#X obj 244 874 cnv 15 220 75 empty empty empty 20 12 0 14 -261234 -66577
+#X obj 195 702 hsl 128 15 0 1 0 0 empty borderAreaSize border_area_size
+-2 -8 0 10 -262144 -1 -1 9525 1;
+#X obj 184 754 hsl 151 15 0 15000 0 0 empty maxTimeInBorderArea max_time_in_border_area
+-2 -8 0 10 -262144 -1 -1 2500 1;
+#X floatatom 322 774 6 0 0 0 - - -;
+#X floatatom 307 721 5 0 0 0 - - -;
+#X obj 142 875 cnv 15 220 75 empty empty empty 20 12 0 14 -261234 -66577
 0;
-#X obj 338 890 hsl 101 15 0 1 0 0 empty maxManhattanDistance max_manhattan_dist.
+#X obj 239 891 hsl 101 15 0 1 0 0 empty maxManhattanDistance max_manhattan_dist.
 -2 -8 0 10 -262144 -1 -1 1500 1;
-#X floatatom 346 912 5 0 0 0 - - -;
-#X obj 149 660 pix_multiblob 9;
+#X floatatom 247 913 5 0 0 0 - - -;
+#X obj 149 644 pix_multiblob 9;
 #X obj 32 72 gemhead;
 #X obj 610 196 gemwin 25;
-#X obj 290 806 hsl 101 15 0 10000 0 0 empty maxTimeAtAll max_time_at_all
--2 -8 0 10 -262144 -1 -1 3800 1;
-#X floatatom 387 826 6 0 0 0 - - -;
+#X obj 191 807 hsl 101 15 0 10000 0 0 empty maxTimeAtAll max_time_at_all
+-2 -8 0 10 -262144 -1 -1 3700 1;
+#X floatatom 288 827 6 0 0 0 - - -;
 #X text 625 36 revert to initial settings;
 #X text 173 389 <-- multiplying and unlinking the pixel and vertex
 content;
@@ -320,7 +323,7 @@ resize \$1 \; blob_times resize \$1;
 #X connect 16 3 18 0;
 #X connect 18 0 17 0;
 #X connect 18 1 14 0;
-#X restore 248 848 pd blob_lists;
+#X restore 149 849 pd blob_lists;
 #X text 75 29 Tracking multible blobs keeping their ID;
 #N canvas 974 377 232 215 separation 0;
 #X obj 17 20 inlet;
@@ -340,15 +343,15 @@ resize \$1 \; blob_times resize \$1;
 #X connect 5 0 2 0;
 #X restore 32 389 pd separation ------;
 #X msg 630 174 color 0.5 0.5 0.5 \, frame 25;
-#X obj 32 722 translate -8 1 0 0;
-#X text 496 917 Jakob Gomoll and Max Neupert \; GMU - Bauhaus-Universität
+#X obj 32 666 translate -8 1 0 0;
+#X text 394 910 Jakob Gomoll and Max Neupert \; GMU - Bauhaus-Universität
 Weimar 2013;
 #X text 75 16 Pure Data + Gem;
-#X msg 273 720 borderAreaSize \$1;
-#X msg 280 772 maxTimeInBorderArea \$1;
-#X msg 287 826 maxTimeAtAll \$1;
-#X obj 232 723 list;
-#X obj 149 687 t b a;
+#X msg 193 721 borderAreaSize \$1;
+#X msg 181 773 maxTimeInBorderArea \$1;
+#X msg 188 827 maxTimeAtAll \$1;
+#X obj 149 699 list;
+#X obj 149 666 t b a;
 #X obj 115 155 + 1;
 #N canvas 919 321 233 399 processBlobs 0;
 #X obj 11 5 inlet;
@@ -634,7 +637,10 @@ resize \$1 \; blob_times resize \$1;
 #X connect 9 0 5 0;
 #X connect 9 1 4 0;
 #X connect 13 1 6 0;
-#X restore 248 930 pd processBlobs;
+#X restore 149 931 pd processBlobs;
+#X text 594 640 Pix_multiblob has changed after gem 0.93.3;
+#X text 594 658 if you have a newer Gem version \, this patch;
+#X text 595 675 will NOT work.;
 #X connect 2 0 3 0;
 #X connect 12 0 13 0;
 #X connect 15 0 79 0;
